@@ -14,22 +14,27 @@ window.onload = function () {
     
     let canvasElement = document.querySelector("#triangleCanvas");
     let context = canvasElement.getContext("2d");
+
+    context.font = "20px 'Roboto', sans-serif";
+    context.textAlign = "center";
     
 
     btn.addEventListener("click", function() {
+
+        context.clearRect(0, 0, canvasElement.width, canvasElement.height); // clear canvas for next text
 
         let aValue = Number(a.value*50); // Input value a number for if else comparison conditions
         let bValue = Number(b.value*50);
         let cValue = Number(c.value*50);
         
         if (aValue == bValue && bValue == cValue) {
-            canPar.innerHTML = "Triangle is equilateral"; // if all sides equal
+            context.fillText("Triangle is equilateral", 250, 320); // if all sides equal
         } else if (aValue == bValue || bValue == cValue || aValue == cValue) {
-            canPar.innerHTML = "Triangle is isosceles"; // if two sides equal
+            context.fillText("Triangle is isosceles", 250, 320); // if two sides equal
         } else if (aValue + bValue > cValue && aValue + cValue > bValue && bValue + cValue > aValue) {
-            canPar.innerHTML = "Triangle is scalene"; // if none of the sides are equal, but two side sum always larger than third
+            context.fillText("Triangle is scalene", 250, 320); // if none of the sides are equal, but two side sum always larger than third
         } else {
-            canPar.innerHTML = "It's not possible to calculate this kind of triangle"; // if it's an impossible triangle
+            context.fillText("It's not possible to calculate this kind of triangle", 250, 320); // if it's an impossible triangle
         }
 
         
