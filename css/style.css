@@ -5,28 +5,28 @@
 
 body {
     background-color: #f9f9f9;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
     width: 600px;
     height: auto;
+    background-color: #ffffff;
+
     display: flex;
     flex-direction: column;
 
-    background-color: #ffffff;
-
-    margin: 5vh auto;
-
     border: 1px solid black;
     border-radius: 2vh;
+    margin: 5vh auto;
 }
 
 #triangleCanvas {
     width: 500px;
     height: 350px;
+
     border: 1px solid black;
-    margin: 5vh auto;
+    margin: 50px auto 2vh auto;
 }
 
 .inputField, .calculateBtn {
@@ -35,25 +35,27 @@ body {
 }
 
 .inputField {
-    padding: 10px;
     width: 150px;
     height: 20px;
-    font-size: 15px;
+    
     left: 100px;
+    font-size: 15px;
     
     border: 1px solid black;
     border-radius: 5px;
+    padding: 15px;
 }
 
 .inputLabel {
-    
-    position: relative;
-    top: 10px;
-    left: 115px;
-    font-size: 12px;
-    width: 45px;
-    padding: 2px;
+    width: 34px;
     background-color:white;
+
+    position: relative;
+    top: 7px;
+    left: 120px;
+
+    padding: 1px;
+    font-size: 12px;
 
     z-index: 5;
 }
@@ -61,17 +63,17 @@ body {
 
 .calculateBtn {
     width: 120px;
-    margin: 50px;
-
-    text-transform: uppercase;
-
     background-color: #43425d;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     color: #fdfdfd;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+
     border-radius: 5px;
+    margin: 50px;
     padding: 5px;
     left: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-
-    letter-spacing: 1px;
 }
